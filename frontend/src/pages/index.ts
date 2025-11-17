@@ -1,2 +1,9 @@
 export { default as HomePage } from './Home';
+export { default as ProductsPage } from './Products';
+export { default as ProductNewPage } from './ProductNew';
+export { default as ProductEditPage } from './ProductEdit';
+export { default as ProductDetailPage } from './ProductDetail';
+export { default as CriticalProductsPage } from './CriticalProducts';
+export { default as ProductCriticalHistoryPage } from './ProductCriticalHistory';
+export { default as ProductMinimumStockPage } from './ProductMinimumStock';
 export { default as NotFoundPage } from './NotFound';
