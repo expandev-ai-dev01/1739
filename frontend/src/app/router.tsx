@@ -11,6 +11,9 @@ const ProductDetailPage = lazy(() => import('@/pages/ProductDetail'));
 const CriticalProductsPage = lazy(() => import('@/pages/CriticalProducts'));
 const ProductCriticalHistoryPage = lazy(() => import('@/pages/ProductCriticalHistory'));
 const ProductMinimumStockPage = lazy(() => import('@/pages/ProductMinimumStock'));
+const StockMovementsPage = lazy(() => import('@/pages/StockMovements'));
+const StockMovementNewPage = lazy(() => import('@/pages/StockMovementNew'));
+const StockMovementDetailPage = lazy(() => import('@/pages/StockMovementDetail'));
 const NotFoundPage = lazy(() => import('@/pages/NotFound'));
 
 /**
@@ -88,6 +91,35 @@ export const router = createBrowserRouter([
             element: (
               <Suspense fallback={<LoadingSpinner />}>
                 <ProductMinimumStockPage />
+              </Suspense>
+            ),
+          },
+        ],
+      },
+      {
+        path: 'stock-movements',
+        children: [
+          {
+            index: true,
+            element: (
+              <Suspense fallback={<LoadingSpinner />}>
+                <StockMovementsPage />
+              </Suspense>
+            ),
+          },
+          {
+            path: 'new',
+            element: (
+              <Suspense fallback={<LoadingSpinner />}>
+                <StockMovementNewPage />
+              </Suspense>
+            ),
+          },
+          {
+            path: ':id',
+            element: (
+              <Suspense fallback={<LoadingSpinner />}>
+                <StockMovementDetailPage />
               </Suspense>
             ),
           },

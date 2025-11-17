@@ -52,6 +52,16 @@ export const RootLayout = () => {
                 >
                   Estoque Crítico
                 </Link>
+                <Link
+                  to="/stock-movements"
+                  className={`text-sm font-medium ${
+                    location.pathname.startsWith('/stock-movements')
+                      ? 'text-blue-600'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Movimentações
+                </Link>
               </nav>
             </div>
           </div>

@@ -4,6 +4,8 @@ import * as productDetailController from '@/api/v1/internal/product/detail/contr
 import * as productCriticalController from '@/api/v1/internal/product/critical/controller';
 import * as productCriticalHistoryController from '@/api/v1/internal/product/detail/critical-history/controller';
 import * as productMinimumStockController from '@/api/v1/internal/product/detail/minimum-stock/controller';
+import * as stockMovementController from '@/api/v1/internal/stock-movement/controller';
+import * as stockMovementDetailController from '@/api/v1/internal/stock-movement/detail/controller';
 
 const router = Router();
 
@@ -16,5 +18,10 @@ router.put('/product/:id', productDetailController.putHandler);
 router.delete('/product/:id', productDetailController.deleteHandler);
 router.get('/product/:id/critical-history', productCriticalHistoryController.getHandler);
 router.patch('/product/:id/minimum-stock', productMinimumStockController.patchHandler);
+
+// Stock Movement routes - /api/v1/internal/stock-movement
+router.get('/stock-movement', stockMovementController.getHandler);
+router.post('/stock-movement', stockMovementController.postHandler);
+router.get('/stock-movement/:id', stockMovementDetailController.getHandler);
 
 export default router;

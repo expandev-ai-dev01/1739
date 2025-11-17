@@ -6,4 +6,7 @@ export { default as ProductDetailPage } from './ProductDetail';
 export { default as CriticalProductsPage } from './CriticalProducts';
 export { default as ProductCriticalHistoryPage } from './ProductCriticalHistory';
 export { default as ProductMinimumStockPage } from './ProductMinimumStock';
+export { default as StockMovementsPage } from './StockMovements';
+export { default as StockMovementNewPage } from './StockMovementNew';
+export { default as StockMovementDetailPage } from './StockMovementDetail';
 export { default as NotFoundPage } from './NotFound';
